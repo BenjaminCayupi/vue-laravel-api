@@ -12,3 +12,21 @@
     <li>Vuelidate (libreria basada en modelos para validar formularios)</li>
   </ul>
 
+  <div class="margin-top: 10px">
+   <div>
+    <img src="https://i.imgur.com/GkJtamt.png" width="400px">
+    <img src="https://i.imgur.com/5L6AN50.png" width="400px">
+  </div>
+  <div>
+    <img src="https://i.imgur.com/wfF09wb.png" width="400px">
+    <img src="https://i.imgur.com/fSbh5DN.png" width="400px">
+  </div>
+  <div>
+    <img src="https://i.imgur.com/XeOOgf2.png" width="400px">
+    <img src="https://i.imgur.com/1RrQDhJ.png" width="400px">
+  </div>
+  </div>
+  
+
+
+
