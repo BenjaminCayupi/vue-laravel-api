@@ -1,7 +1,5 @@
 <template>
-  
-    
-    <v-card :class="dato.color" dark outlined>
+  <v-card :class="dato.color" dark outlined>
     <v-list-item three-line>
       <v-list-item-content>
         <div class="overline">{{dato.overline}}</div>
