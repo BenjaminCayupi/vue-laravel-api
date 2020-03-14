@@ -17,40 +17,10 @@
               <v-card-text class="py-0">
                 <v-col cols="12" sm="12" md="12">
                   <form id="formProducto" ref="formProducto">
-                    <v-text-field
-                      v-model="editedItem['modelo']"
-                      label="Modelo"
-                      color="secondary"
-                      :error-messages="modeloErrors"
-                      @input="$v.editedItem['modelo'].$touch()"
-                      @blur="$v.editedItem['modelo'].$touch()"
-                    ></v-text-field>
-                    <v-text-field
-                      v-model="editedItem['marca']"
-                      label="Marca"
-                      color="secondary"
-                      :error-messages="marcaErrors"
-                      @input="$v.editedItem['marca'].$touch()"
-                      @blur="$v.editedItem['marca'].$touch()"
-                    ></v-text-field>
-                    <v-select
-                      v-model="select"
-                      label="Categoria"
-                      color="secondary"
-                      item-color="secondary"
-                      :items="categoria"
-                      :error-messages="categErrors"
-                      @input="$v.select.$touch()"
-                      @blur="$v.select.$touch()"
-                    ></v-select>
-                    <v-text-field
-                      v-model="editedItem['nserie']"
-                      :error-messages="nserieErrors"
-                      @input="$v.editedItem['nserie'].$touch()"
-                      @blur="$v.editedItem['nserie'].$touch()"
-                      label="Numero de Serie"
-                      color="secondary"
-                    ></v-text-field>
+                    <v-text-field v-model="editedItem['modelo']" label="Modelo" color="secondary" :error-messages="modeloErrors" @input="$v.editedItem['modelo'].$touch()" @blur="$v.editedItem['modelo'].$touch()" ></v-text-field>
+                    <v-text-field v-model="editedItem['marca']" label="Marca" color="secondary" :error-messages="marcaErrors" @input="$v.editedItem['marca'].$touch()" @blur="$v.editedItem['marca'].$touch()" ></v-text-field>
+                    <v-select v-model="select" label="Categoria" color="secondary" item-color="secondary" :items="categoria" :error-messages="categErrors" @input="$v.select.$touch()" @blur="$v.select.$touch()" ></v-select>
+                    <v-text-field v-model="editedItem['nserie']" :error-messages="nserieErrors" @input="$v.editedItem['nserie'].$touch()" @blur="$v.editedItem['nserie'].$touch()" label="Numero de Serie" color="secondary" ></v-text-field>
                   </form>
                 </v-col>
               </v-card-text>

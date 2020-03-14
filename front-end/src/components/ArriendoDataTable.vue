@@ -23,105 +23,33 @@
                   <form id="formArriendo" ref="formArriendo">
                     <v-row class="py-3">
                       <v-col cols="12" sm="12" md="12" class="py-0">
-                        <v-select
-                          v-model="editedItem['cliente_id']"
-                          label="Cliente"
-                          :items="clientes"
-                          item-text="nombre"
-                          item-value="id"
-                          color="secondary"
-                          item-color="secondary"
-                          :error-messages="clienteErrors"
-                          @change="$v.editedItem['cliente_id'].$touch()"
-                          @blur="$v.editedItem['cliente_id'].$touch()"
-                        ></v-select>
+                        <v-select v-model="editedItem['cliente_id']" label="Cliente" :items="clientes" item-text="nombre" item-value="id" color="secondary" item-color="secondary" :error-messages="clienteErrors" @change="$v.editedItem['cliente_id'].$touch()" @blur="$v.editedItem['cliente_id'].$touch()" ></v-select>
                       </v-col>
 
                       <v-col cols="12" sm="12" md="12" class="py-0">
-                        <v-select
-                          v-model="editedItem['producto_id']"
-                          label="Producto"
-                          :items="productos"
-                          item-text="modelo"
-                          item-value="id"
-                          color="secondary"
-                          item-color="secondary"
-                          :error-messages="productoErrors"
-                          @change="$v.editedItem['producto_id'].$touch()"
-                          @blur="$v.editedItem['producto_id'].$touch()"
-                        ></v-select>
+                        <v-select v-model="editedItem['producto_id']" label="Producto" :items="productos" item-text="modelo" item-value="id" color="secondary" item-color="secondary" :error-messages="productoErrors" @change="$v.editedItem['producto_id'].$touch()" @blur="$v.editedItem['producto_id'].$touch()" ></v-select>
                       </v-col>
                       <v-col cols="12" sm="6" md="6" class="py-0">
                         <v-menu v-model="fech1" :close-on-content-click="false" :nudge-right="40" transition="scale-transition" offset-y min-width="290px" color="secondary" >
                           <template v-slot:activator="{ on }">
-                            <v-text-field
-                              v-model="editedItem['fentrega']"
-                              label="Fecha inicio"
-                              readonly
-                              v-on="on"
-                              color="secondary"
-                              :error-messages="fechaInErrors"
-                              @change="$v.editedItem['fentrega'].$touch()"
-                              @blur="$v.editedItem['fentrega'].$touch()"
-                            ></v-text-field>
+                            <v-text-field v-model="editedItem['fentrega']" label="Fecha inicio" readonly v-on="on" color="secondary" :error-messages="fechaInErrors" @change="$v.editedItem['fentrega'].$touch()" @blur="$v.editedItem['fentrega'].$touch()" ></v-text-field>
                           </template>
-                          <v-date-picker
-                            v-model="editedItem['fentrega']"
-                            @input="fech1 = false"
-                            no-title
-                            :first-day-of-week="1"
-                          ></v-date-picker>
+                          <v-date-picker v-model="editedItem['fentrega']" @input="fech1 = false" no-title :first-day-of-week="1" ></v-date-picker>
                         </v-menu>
                       </v-col>
                       <v-col cols="12" sm="6" md="6" class="py-0">
-                        <v-menu
-                          v-model="fech2"
-                          :close-on-content-click="false"
-                          :nudge-right="40"
-                          transition="scale-transition"
-                          offset-y
-                          min-width="290px"
-                        >
+                        <v-menu v-model="fech2" :close-on-content-click="false" :nudge-right="40" transition="scale-transition" offset-y min-width="290px" >
                           <template v-slot:activator="{ on }">
-                            <v-text-field
-                              v-model="editedItem['ftermino']"
-                              label="Fecha termino"
-                              readonly
-                              v-on="on"
-                              color="secondary"
-                              :error-messages="fechaTmErrors"
-                              @change="$v.editedItem['ftermino'].$touch()"
-                              @blur="$v.editedItem['ftermino'].$touch()"
-                            ></v-text-field>
+                            <v-text-field v-model="editedItem['ftermino']" label="Fecha termino" readonly v-on="on" color="secondary" :error-messages="fechaTmErrors" @change="$v.editedItem['ftermino'].$touch()" @blur="$v.editedItem['ftermino'].$touch()" ></v-text-field>
                           </template>
-                          <v-date-picker
-                            v-model="editedItem['ftermino']"
-                            @input="fech2 = false"
-                            no-title
-                            :first-day-of-week="1"
-                          ></v-date-picker>
+                          <v-date-picker v-model="editedItem['ftermino']" @input="fech2 = false" no-title :first-day-of-week="1" ></v-date-picker>
                         </v-menu>
                       </v-col>
                       <v-col cols="12" sm="6" md="6" class="py-0">
-                        <v-select
-                          v-model="editedItem['estado']"
-                          label="Estado"
-                          :items="estado"
-                          color="secondary"
-                          :error-messages="estadoErrors"
-                          @change="$v.editedItem['estado'].$touch()"
-                          @blur="$v.editedItem['estado'].$touch()"
-                        ></v-select>
+                        <v-select v-model="editedItem['estado']" label="Estado" :items="estado" color="secondary" :error-messages="estadoErrors" @change="$v.editedItem['estado'].$touch()" @blur="$v.editedItem['estado'].$touch()" ></v-select>
                       </v-col>
                       <v-col cols="12" sm="6" md="6" class="py-0">
-                        <v-text-field
-                          v-model="editedItem['cantidad']"
-                          label="Cantidad"
-                          color="secondary"
-                          :error-messages="cantidadErrors"
-                          @input="$v.editedItem['cantidad'].$touch()"
-                          @blur="$v.editedItem['cantidad'].$touch()"
-                        ></v-text-field>
+                        <v-text-field v-model="editedItem['cantidad']" label="Cantidad" color="secondary" :error-messages="cantidadErrors" @input="$v.editedItem['cantidad'].$touch()" @blur="$v.editedItem['cantidad'].$touch()" ></v-text-field>
                       </v-col>
                     </v-row>
                   </form>

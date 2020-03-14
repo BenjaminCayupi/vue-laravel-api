@@ -22,41 +22,10 @@
                     <v-col cols="12" sm="12" md="12">
                       <!-- Formulario para guardar y modificar clientes -->
                       <form id="formCliente" ref="formCliente">
-                        <v-text-field
-                          v-model="editedItem['nombre']"
-                          :error-messages="nombreErrors"
-                          :counter="20"
-                          label="Nombre cliente"
-                          color="secondary"
-                          class="pt-0"
-                          @input="$v.editedItem['nombre'].$touch()"
-                          @blur="$v.editedItem['nombre'].$touch()"
-                        ></v-text-field>
-                        <v-text-field
-                          v-model="editedItem['email']"
-                          :error-messages="emailErrors"
-                          label="E-mail"
-                          color="secondary"
-                          @input="$v.editedItem['email'].$touch()"
-                          @blur="$v.editedItem['email'].$touch()"
-                        ></v-text-field>
-                        <v-text-field
-                          v-model="editedItem['telefono']"
-                          :error-messages="telefonoErrors"
-                          label="Telefono"
-                          color="secondary"
-                          :messages="['Ejemplo: 912345678']"
-                          @input="$v.editedItem['telefono'].$touch()"
-                          @blur="$v.editedItem['telefono'].$touch()"
-                        ></v-text-field>
-                        <v-text-field
-                          v-model="editedItem['direccion']"
-                          :error-messages="direccionErrors"
-                          label="Direccion"
-                          color="secondary"
-                          @input="$v.editedItem['direccion'].$touch()"
-                          @blur="$v.editedItem['direccion'].$touch()"
-                        ></v-text-field>
+                        <v-text-field v-model="editedItem['nombre']" :error-messages="nombreErrors" :counter="20" label="Nombre cliente" color="secondary" class="pt-0" @input="$v.editedItem['nombre'].$touch()" @blur="$v.editedItem['nombre'].$touch()" ></v-text-field>
+                        <v-text-field v-model="editedItem['email']" :error-messages="emailErrors" label="E-mail" color="secondary" @input="$v.editedItem['email'].$touch()" @blur="$v.editedItem['email'].$touch()" ></v-text-field>
+                        <v-text-field v-model="editedItem['telefono']" :error-messages="telefonoErrors" label="Telefono" color="secondary" :messages="['Ejemplo: 912345678']" @input="$v.editedItem['telefono'].$touch()" @blur="$v.editedItem['telefono'].$touch()" ></v-text-field>
+                        <v-text-field v-model="editedItem['direccion']" :error-messages="direccionErrors" label="Direccion" color="secondary" @input="$v.editedItem['direccion'].$touch()" @blur="$v.editedItem['direccion'].$touch()" ></v-text-field>
                       </form>
                     </v-col>
                  
