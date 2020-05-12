@@ -1,6 +1,6 @@
 # vue-laravel-api
 <h4 style="font-weight: bold;margin-top: 10px;">Descripción</h4>
-  <p>Sistema basico de arriendo con operaciones crud, responsive design, desarrollada con Vue js para el frontend y laravel para las api rest en el backend</p>
+  <p>Sistema basico de arriendo con operaciones CRUD, responsive design, desarrollada con Vue js para el frontend y laravel para las api rest en el backend</p>
   
   <h4 style="font-weight: bold;margin-top: 10px;">Tecnologias</h4>
   <ul>
